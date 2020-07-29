@@ -1,12 +1,28 @@
-import React from 'react';
-
-import PageDefault from '../../../components/PageDefault';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
+import PageDefault from '../../../components/PageDefault';
+import Form from '../../../components/Form';
+import Table from '../../../components/Form/components/Table';
+
 function CadastroCategoria() {
+
+    const [categories, setCategories] = useState([]);
+
+    function handleAddCategory(values) {
+        setCategories([...categories, values])
+    }
+
     return (
         <PageDefault>
-            <h1>Cadastrar Categoria</h1>
+            <Form onSubmit={handleAddCategory} />
+            <ul>
+                {categories.map((categoria, indice) => {
+                    return (
+                        <Table key={categoria + indice} categoria={categoria} />
+                    )
+                })}
+            </ul>
 
             <Link to='/'>
                 Ir para home
