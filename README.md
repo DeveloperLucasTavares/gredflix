@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="Gredflix" title="#delicinha" src="src/assets/img/logo.png" width="250px" />
+    <img alt="Gredflix" title="#logo" src="src/assets/img/logo.png" width="250px" />
 </h1>
 
 ## :desktop_computer: Projeto
